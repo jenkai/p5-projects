@@ -9,4 +9,5 @@ function draw() {
 	textSize(20)
 	text('This is first version', width/2, height/2);
 	text('This is second version', width/2, height/2+20);
+	text('This is third version', width/2, height/2+40);
 }
