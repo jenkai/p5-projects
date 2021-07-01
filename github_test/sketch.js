@@ -10,5 +10,6 @@ function draw() {
 	text('This is first version', width/2, height/2);
 	text('This is second version', width/2, height/2+20);
 	text('This is third version', width/2, height/2+40);
-	text('This is fifth version', width/2, height/2+60);
+	text('This is fourth version add branch', width/2, height/2+60);
+	text('This is fifth version', width/2, height/2+80);
 }
