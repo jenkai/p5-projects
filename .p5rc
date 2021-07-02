@@ -1,6 +1,7 @@
 {
   "name": "p5-projects",
   "projects": [
-    "github_test"
+    "github_test",
+    "sine_wave"
   ]
 }
