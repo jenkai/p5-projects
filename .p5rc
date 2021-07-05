@@ -2,6 +2,8 @@
   "name": "p5-projects",
   "projects": [
     "github_test",
-    "sine_wave"
+    "sine_wave",
+    "html_button",
+    "html"
   ]
 }
