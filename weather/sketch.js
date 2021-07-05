@@ -28,17 +28,17 @@ function draw() {
 	let x4 = 0
 	let y1 = 0
 	let y2 = 0
-	let y3 = -lenth / 2 - 20
-	let y4 = -lenth / 2 - 20
+	let y3 = -lenth / 2 
+	let y4 = -lenth / 2 
 	let pos = []
 	today = new Date();
 	background(200)
-	translate(width / 2, height / 1.5)
+	translate(width / 2, height /1.7)
 
 
 	noFill()
 	strokeWeight(2)
-	stroke(255)
+	stroke(0)
 	bezier(x1, y1, x2, y2, x3, y3, x4, y4);
 
 
@@ -52,7 +52,7 @@ function draw() {
 
 	noFill()
 	strokeWeight(2)
-	stroke(255)
+	stroke(0)
 	bezier(-x1, y1, -x2, y2, -x3, y3, -x4, y4);
 
 
@@ -71,31 +71,33 @@ function draw() {
 	let currentT = floor(map((abs((today.getHours() * 60 + today.getMinutes()) - sunRiseTime)), 0, dayLenth, 0, steps * 2))
 
 
-	noStroke()
+	
 	fill(250, 250, 0)
-	ellipse(pos[currentT][0], pos[currentT][1], 20, 20)
+	ellipse(pos[currentT][0], pos[currentT][1], 30, 30)
 
 	showText()
 }
 
 function showText() {
 
-	fill(255)
+	fill(0)
+	textFont('Josefin Sans')
 	noStroke()
-	textAlign(CENTER)
+	textAlign(CENTER,TOP)
+	textStyle(BOLD)
+	textStyle()
 	textSize(30)
-	text(today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds(), 0, 100)
+	text(today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds(), 0, 40)
 
 
 
-	fill(255)
+	fill(0)
 	textAlign(LEFT);
-	textFont('Optima')
 	textSize(20)
-	text(sunRise, -lenth / 2, 20)
+	text(sunRise, -lenth / 2, 40)
 
 
 	textAlign(RIGHT);
-	text(sunSet, lenth / 2, 20)
+	text(sunSet, lenth / 2, 40)
 
 }
