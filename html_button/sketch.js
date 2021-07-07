@@ -5,11 +5,6 @@ function setup() {
 	background(0);
 	for (let i = 0; i < 10; i++) {
 		buttons.push(createButton('button')) 
-		buttons[i].mousePressed(changeBG)
+		buttons[i].mousePressed(() => background(random(255)))
 	}
-}
-
-function changeBG() {
-	let val = random(255);
-	background(val);
-}
+} 

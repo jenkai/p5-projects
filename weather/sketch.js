@@ -10,7 +10,6 @@ function preload() {
 	loadJSON("https://opendata.cwb.gov.tw/api/v1/rest/datastore/A-B0062-001?Authorization=CWB-F739ECEB-698F-4DA2-BB8E-D5A590A7FEFD&format=JSON&locationName=%E5%AE%9C%E8%98%AD%E7%B8%A3&timeFrom=2021-07-05&timeTo=2021-07-06&sort=", analyze)
 }
 
-
 function analyze(data) {
 	sunRise = data.records.locations.location[0].time[0].parameter[1].parameterValue
 	sunMid = data.records.locations.location[0].time[0].parameter[3].parameterValue
@@ -18,9 +17,16 @@ function analyze(data) {
 }
 
 function setup() {
-	createCanvas(windowWidth, windowHeight);
-	background(0, 0)
-	lenth = width/2
+	var canv = createCanvas(windowWidth, windowHeight/2);
+	canv.parent('p5pos')
+	background(0,0)
+	console.log(width)
+	if (width<=524) {
+		lenth = width
+	} else {
+		lenth = width/1.7
+	}
+	
 }
 
 
@@ -37,7 +43,7 @@ function draw() {
 	let steps = 100;
 	today = new Date();
 	clear()
-	translate(width / 2, height / 1.7)
+	translate(width / 2, height-20)
 
 
 
@@ -94,10 +100,12 @@ function draw() {
 	
 	fill(250, 250, 0)
 	if(today.getHours() * 60 + today.getMinutes()<sunSetTime){
+		stroke(0)
 		ellipse(pos[currentT][0], pos[currentT][1], 30, 30)
 	}
 	else{
-		image(moon,lenth/2,-lenth/1.4,100,100)
+		// image(moon,lenth/2,-lenth/1.4,100,100)
+
 	}
 	
 	

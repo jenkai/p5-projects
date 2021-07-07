@@ -6,6 +6,8 @@
     "html_button",
     "html",
     "weather",
-    "vue"
+    "vue",
+    "cam",
+    "server"
   ]
 }

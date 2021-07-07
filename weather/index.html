@@ -18,11 +18,13 @@
 		}
 
 		canvas {
+			display: flex;
+			align-content: center;
 			margin: auto;
+			
 		}
 
 		h1 {
-			
 			margin: 0;
 			padding-top: 50px;
 			padding-left: 40px;
@@ -31,22 +33,35 @@
 		}
 
 		h2 {
-
-			
 			margin: 0;
 			padding-left: 40px;
 			font-size: 30pt;
 			font-family: 'Josefin Sans', sans-serif;
 		}
+		#sider{
+
+			display: flex;
+		}
+		.box{
+			flex: 6;
+		}
+		.box2{
+			flex: 1;
+			/* background-color: blanchedalmond; */
+		}
 	</style>
 </head>
 
 <body id="backCol">
-
-	<h1>SUNRISE & SUNSET</h1>
-	<h2>visualizer</h2>
-
-
+	<div id="sider">
+		<div class="box">
+			<h1>SUNRISE & SUNSET</h1>
+			<h2>visualizer</h2>
+		</div>
+		<img src="moon.png" class="box2"></img>
+	</div>
+	<div id="p5pos"></div>
+	<div>this is </div>
 </body>
 
 </html>
