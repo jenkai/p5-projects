@@ -18,37 +18,51 @@
 		}
 
 		canvas {
-			display: flex;
-			align-content: center;
-			margin: auto;
-			
+			width: 100%;
+			margin: 0;
+			padding: 0;
 		}
 
 		h1 {
 			margin: 0;
-			padding-top: 50px;
-			padding-left: 40px;
+			padding-top: 30px;
+			padding-left: 30px;
 			font-family: 'Josefin Sans', sans-serif;
 			font-size: 35pt;
 		}
 
 		h2 {
 			margin: 0;
-			padding-left: 40px;
-			font-size: 30pt;
+			padding-left: 30px;
+			font-size: 25pt;
 			font-family: 'Josefin Sans', sans-serif;
 		}
-		#sider{
 
+		#sider {
 			display: flex;
 		}
-		.box{
-			flex: 6;
+
+		.box {
+			flex:1;
+			line-height: 50px;
 		}
-		.box2{
+
+		.box2 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			flex: 1;
-			/* background-color: blanchedalmond; */
 		}
+		.box2 > img{
+			width: 100px;
+		}
+		#p5pos{
+			display: flex;
+			justify-content: center;
+			align-content: center;
+		}
+
+
 	</style>
 </head>
 
@@ -58,10 +72,11 @@
 			<h1>SUNRISE & SUNSET</h1>
 			<h2>visualizer</h2>
 		</div>
-		<img src="moon.png" class="box2"></img>
+		<div class="box2">
+			<img src="moon.png" ></img>
+		</div>
 	</div>
 	<div id="p5pos"></div>
-	<div>this is </div>
 </body>
 
 </html>
